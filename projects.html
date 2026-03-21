@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Krisanthi Segar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .pcard-art {
+      height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .pcard-art::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 26px 26px;
+    }
+    .pcard-art::after {
+      content: '';
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
+      opacity: 0.22;
+      pointer-events: none;
+    }
+    .ci {
+      width: 62px;
+      height: 62px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      flex-shrink: 0;
+    }
+    .ci svg { width: 26px; height: 26px; }
+  </style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">Krisanthi</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="projects.html" class="nav-link active">Projects</a>
+  </div>
+  <a href="index.html#contact" class="nav-hire">Open to Internships</a>
+</nav>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Portfolio</p>
+    <h1 class="page-title">All Projects</h1>
+    <p class="page-sub">10 repositories &nbsp;&middot;&nbsp; AI Systems &nbsp;&middot;&nbsp; Data Engineering &nbsp;&middot;&nbsp; Application Development</p>
+  </div>
+</section>
+
+<section class="proj-section">
+  <div class="wrap">
+    <div class="proj-grid">
+
+      <!-- 1 RAG -->
+      <article class="pcard" style="--bar:#E8873A">
+        <div class="pcard-art" style="background:linear-gradient(145deg,#1c1008,#110b05);--glow:#E8873A">
+          <div class="ci" style="background:rgba(232,135,58,.14);border:1px solid rgba(232,135,58,.28)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#E8873A" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+              <polyline points="14,2 14,8 20,8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <line x1="10" y1="9" x2="8" y2="9"/>
+            </svg>
+          </div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><div class="badges"><span class="b b-py">Python</span><span class="b b-aws">AWS</span><span class="b b-ai">LLM</span></div><a href="https://github.com/Krisanthi/Multimodal-Document-Intelligence-RAG-System" target="_blank" class="ext-link">&#8599;</a></div>
+          <h3 class="pcard-name">Multimodal Document Intelligence RAG System</h3>
+          <p class="pcard-desc">AWS Textract OCR, OpenSearch hybrid search (KNN + BM25), Llama 3.3 via Groq, two-stage re-ranking. Serverless via AWS SAM.</p>
+          <div class="ptags"><span>OpenSearch</span><span>Groq</span><span>AWS SAM</span><span>Streamlit</span></div>
+          <div class="pbtns"><a href="https://multimodal-document-intelligence-rag-system-j9xgrgx8ejsucrmhwx.streamlit.app/#doc-intel-rag" target="_blank" class="btn-fill btn-s">Live Demo</a><a href="https://github.com/Krisanthi/Multimodal-Document-Intelligence-RAG-System" target="_blank" class="btn-line btn-s">Repository</a></div>
+        </div>
+      </article>
+
+      <!-- 2 EmotiChat -->
+      <article class="pcard" style="--bar:#A78BFA">
+        <div class="pcard-art" style="background:linear-gradient(145deg,#110d1e,#0c0916);--glow:#A78BFA">
+          <div class="ci" style="background:rgba(167,139,250,.14);border:1px solid rgba(167,139,250,.28)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><div class="badges"><span class="b b-py">Python</span><span class="b b-ai">Multimodal</span></div><a href="https://github.com/Krisanthi/EmotiChat" target="_blank" class="ext-link">&#8599;</a></div>
+          <h3 class="pcard-name">EmotiChat</h3>
+          <p class="pcard-desc">Real-time emotion-aware chatbot fusing facial (DeepFace 35%), vocal (Librosa 30%), and text (DistilRoBERTa 35%) signals to adapt Llama 3.3 response tone. FastAPI backend, DynamoDB session history.</p>
+          <div class="ptags"><span>DeepFace</span><span>Whisper</span><span>FastAPI</span><span>DynamoDB</span></div>
+          <div class="pbtns"><a href="https://github.com/Krisanthi/EmotiChat" target="_blank" class="btn-line btn-s">Repository</a></div>
+        </div>
+      </article>
+
+      <!-- 3 F1 Pipeline -->
+      <article class="pcard" style="--bar:#FBBF24">
+        <div class="pcard-art" style="background:linear-gradient(145deg,#1a1200,#110d00);--glow:#FBBF24">
+          <div class="ci" style="background:rgba(251,191,36,.14);border:1px solid rgba(251,191,36,.28)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><div class="badges"><span class="b b-py">Python</span><span class="b b-aws">AWS</span><span class="b b-data">ETL</span></div><a href="https://github.com/Krisanthi/f1-pipeline" target="_blank" class="ext-link">&#8599;</a></div>
+          <h3 class="pcard-name">F1 Race Outcome Prediction Pipeline</h3>
+          <p class="pcard-desc">End-to-end AWS cloud pipeline for F1 dataset (1950 to 2020). Glue PySpark ETL with deduplication, type casting, rolling window aggregations. Step Functions orchestration, Parquet ML feature table for podium prediction.</p>
+          <div class="ptags"><span>AWS Glue</span><span>PySpark</span><span>Step Functions</span><span>Parquet</span></div>
+          <div class="pbtns"><a href="https://github.com/Krisanthi/f1-pipeline" target="_blank" class="btn-line btn-s">Repository</a></div>
+        </div>
+      </article>
+
+      <!-- 4 Tourism -->
+      <article class="pcard" style="--bar:#34D399">
+        <div class="pcard-art" style="background:linear-gradient(145deg,#041410,#02100c);--glow:#34D399">
+          <div class="ci" style="background:rgba(52,211,153,.14);border:1px solid rgba(52,211,153,.28)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><div class="badges"><span class="b b-nb">Jupyter</span><span class="b b-ai">AI</span></div><a href="https://github.com/Krisanthi/AI-Powered-Intelligent-Tourism-Support-System" target="_blank" class="ext-link">&#8599;</a></div>
+          <h3 class="pcard-name">AI-Powered Intelligent Tourism Support</h3>
+          <p class="pcard-desc">AI-driven tourism assistant using NLP and data science for intelligent travel recommendations and structured query responses.</p>
+          <div class="ptags"><span>NLP</span><span>Recommendation</span><span>Python</span></div>
+          <div class="pbtns"><a href="https://github.com/Krisanthi/AI-Powered-Intelligent-Tourism-Support-System" target="_blank" class="btn-line btn-s">Repository</a></div>
+        </div>
+      </article>
+
+      <!-- 5 Travel Route -->
+      <article class="pcard" style="--bar:#60A5FA">
+        <div class="pcard-art" style="background:linear-gradient(145deg,#060f1c,#040b14);--glow:#60A5FA">
+          <div class="ci" style="background:rgba(96,165,250,.14);border:1px solid rgba(96,165,250,.28)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" y1="21" x2="4" y2="14"/>
+              <line x1="4" y1="10" x2="4" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12" y2="3"/>
+              <line x1="20" y1="21" x2="20" y2="16"/>
+              <line x1="20" y1="12" x2="20" y2="3"/>
+              <line x1="1" y1="14" x2="7" y2="14"/>
+              <line x1="9" y1="8" x2="15" y2="8"/>
+              <line x1="17" y1="16" x2="23" y2="16"/>
+            </svg>
+          </div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><div class="badges"><span class="b b-nb">Jupyter</span><span class="b b-ml">Time Series</span></div><a href="https://github.com/Krisanthi/Optimisation-of-Travel-Routes-in-Colombo-Using-Python" target="_blank" class="ext-link">&#8599;</a></div>
+          <h3 class="pcard-name">Travel Route Optimisation, Colombo</h3>
+          <p class="pcard-desc">Forecasting pipeline for optimising routes from Fort Railway Station to Borella Junction. ADF stationarity testing, ARIMA / SARIMA modelling, ACF / PACF lag analysis, RMSE evaluation.</p>
+          <div class="ptags"><span>ARIMA</span><span>Statsmodels</span><span>Decomposition</span><span>Forecasting</span></div>
+          <div class="pbtns"><a href="https://github.com/Krisanthi/Optimisation-of-Travel-Routes-in-Colombo-Using-Python" target="_blank" class="btn-line btn-s">Repository</a></div>
+        </div>
+      </article>
+
+      <!-- 6 Churn -->
+      <article class="pcard" style="--bar:#F87171">
+        <div class="pcard-art" style="background:linear-gradient(145deg,#1a0808,#120505);--glow:#F87171">
+          <div class="ci" style="background:rgba(248,113,113,.14);border:1px solid rgba(248,113,113,.28)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F87171" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"/>
+              <line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/>
+            </svg>
+          </div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><div class="badges"><span class="b b-nb">Jupyter</span><span class="b b-ml">ML</span></div><a href="https://github.com/Krisanthi/Customer-Churn-Prediction-Model" target="_blank" class="ext-link">&#8599;</a></div>
+          <h3 class="pcard-name">Customer Churn Prediction Model</h3>
+          <p class="pcard-desc">End-to-end churn prediction with feature engineering, model comparison, and evaluation. CM2604 Machine Learning coursework.</p>
+          <div class="ptags"><span>Scikit-Learn</span><span>Classification</span><span>EDA</span><span>Feature Eng</span></div>
+          <div class="pbtns"><a href="https://github.com/Krisanthi/Customer-Churn-Prediction-Model" target="_blank" class="btn-line btn-s">Repository</a></div>
+        </div>
+      </article>
+
+      <!-- 7 Restaurant -->
+      <article class="pcard" style="--bar:#FBBF24">
+        <div class="pcard-art" style="background:linear-gradient(145deg,#181200,#110d00);--glow:#FBBF24">
+          <div class="ci" style="background:rgba(251,191,36,.14);border:1px solid rgba(251,191,36,.28)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+              <line x1="3" y1="15" x2="21" y2="15"/>
+              <line x1="9" y1="3" x2="9" y2="21"/>
+              <line x1="15" y1="3" x2="15" y2="21"/>
+            </svg>
+          </div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><div class="badges"><span class="b b-css">HTML/CSS</span><span class="b b-js">JS</span></div><a href="https://github.com/Krisanthi/Restaurant-Website" target="_blank" class="ext-link">&#8599;</a></div>
+          <h3 class="pcard-name">Restaurant Website</h3>
+          <p class="pcard-desc">Full restaurant website with responsive layout, menu, gallery, and contact. Built with HTML, CSS, JavaScript, and XML.</p>
+          <div class="ptags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>XML</span></div>
+          <div class="pbtns"><a href="https://github.com/Krisanthi/Restaurant-Website" target="_blank" class="btn-line btn-s">Repository</a></div>
+        </div>
+      </article>
+
+      <!-- 8 TeamMate -->
+      <article class="pcard" style="--bar:#FB923C">
+        <div class="pcard-art" style="background:linear-gradient(145deg,#160e04,#0e0902);--glow:#FB923C">
+          <div class="ci" style="background:rgba(251,146,60,.14);border:1px solid rgba(251,146,60,.28)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#FB923C" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+              <path d="M16 3.13a4 4 0 010 7.75"/>
+            </svg>
+          </div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><div class="badges"><span class="b b-java">Java</span></div><a href="https://github.com/Krisanthi/TeamMate" target="_blank" class="ext-link">&#8599;</a></div>
+          <h3 class="pcard-name">TeamMate</h3>
+          <p class="pcard-desc">Team collaboration and management application built in Java. Supports workflows, task assignments, and member coordination with OOP design patterns.</p>
+          <div class="ptags"><span>Java</span><span>OOP</span><span>Application</span></div>
+          <div class="pbtns"><a href="https://github.com/Krisanthi/TeamMate" target="_blank" class="btn-line btn-s">Repository</a></div>
+        </div>
+      </article>
+
+      <!-- 9 Construction UI -->
+      <article class="pcard" style="--bar:#34D399">
+        <div class="pcard-art" style="background:linear-gradient(145deg,#041410,#020e09);--glow:#34D399">
+          <div class="ci" style="background:rgba(52,211,153,.14);border:1px solid rgba(52,211,153,.28)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><div class="badges"><span class="b b-py">Python</span></div><a href="https://github.com/Krisanthi/construction-company-UI-with-python." target="_blank" class="ext-link">&#8599;</a></div>
+          <h3 class="pcard-name">Construction Company UI</h3>
+          <p class="pcard-desc">Desktop CRUD application for XYZ construction company. Handles data entry, updates, and management workflows with a Python GUI.</p>
+          <div class="ptags"><span>Python</span><span>CRUD</span><span>Desktop</span></div>
+          <div class="pbtns"><a href="https://github.com/Krisanthi/construction-company-UI-with-python." target="_blank" class="btn-line btn-s">Repository</a></div>
+        </div>
+      </article>
+
+      <!-- 10 POS System -->
+      <article class="pcard" style="--bar:#C084FC">
+        <div class="pcard-art" style="background:linear-gradient(145deg,#100a1c,#0b0716);--glow:#C084FC">
+          <div class="ci" style="background:rgba(192,132,252,.14);border:1px solid rgba(192,132,252,.28)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C084FC" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2"/>
+              <line x1="1" y1="10" x2="23" y2="10"/>
+            </svg>
+          </div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><div class="badges"><span class="b b-java">Java</span></div><a href="https://github.com/Krisanthi/pos-system-and-tax-department-system" target="_blank" class="ext-link">&#8599;</a></div>
+          <h3 class="pcard-name">POS and Tax Department System</h3>
+          <p class="pcard-desc">Point-of-sale and tax department management system. Handles transactions, tax computation, and reporting workflows.</p>
+          <div class="ptags"><span>Java</span><span>POS</span><span>Tax System</span></div>
+          <div class="pbtns"><a href="https://github.com/Krisanthi/pos-system-and-tax-department-system" target="_blank" class="btn-line btn-s">Repository</a></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>Krisanthi Segar &copy; 2025</span>
+  <a href="https://github.com/Krisanthi" target="_blank" style="color:var(--txt3);font-family:var(--ff-m);font-size:12px;transition:color .2s" onmouseover="this.style.color='var(--acc)'" onmouseout="this.style.color='var(--txt3)'">GitHub</a>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
